@@ -1,3 +1,5 @@
+FRONT-END DEPLOYED URL : https://meek-bavarois-40ea02.netlify.app/
+
 For Instant Login:
 
 Email : veveje9865@xitudy.com Password : Mr.V   
