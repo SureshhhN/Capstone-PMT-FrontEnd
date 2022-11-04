@@ -33,8 +33,7 @@ function App() {
               <UserContext.Provider value={{user,setUser}}>
               <UserContext.Provider value={{project,setProject}}></UserContext.Provider>
               <Routes>
-
-                
+                                
               <Route path='/' element={<SignIn/>}/>
             
               <Route path='/about/'element={<About/>} />

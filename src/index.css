@@ -53,3 +53,19 @@ font-family: 'Montserrat', sans-serif;
 .nav-item{
     font-size: 18px;
 }
+
+.label1{
+  color: gold;
+  position: absolute;
+  padding-top: 194px;
+  padding-left: 220px;
+}
+
+.label2{
+  color: gold;
+  position: absolute;
+  padding-left: 470px;
+  padding-top: 15px;
+  
+}
+ 

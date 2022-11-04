@@ -9,10 +9,18 @@ import env from "react-dotenv";
 import styled from "styled-components";
 import { toast } from "react-toastify";
 
+import {FaEye,FaEyeSlash} from "react-icons/fa";
+
 function SignIn() {
   const { user, setUser } = useContext(UserContext);
 
-  const formik = useFormik({
+
+  const [show,setShow] = useState(false)
+  const handleShow = () => {
+    setShow(!show)
+  }
+
+  const formik = useFormik({ 
     initialValues: {
       email: "",
       password: "",
@@ -132,12 +140,19 @@ function SignIn() {
           <input
             id="password"
             name="password"
-            type="text"
+            type={show?"text":"password"}
             className="form-control"
             placeholder="Enter password"
             onChange={formik.handleChange}
             value={formik.values.password}
           />
+<div className="label1">
+          <label onClick={handleShow}>
+            <div>
+              {show?<FaEyeSlash/>:<FaEye/>}
+            </div>
+          </label>
+          </div>
           
 
           <a

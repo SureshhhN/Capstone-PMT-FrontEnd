@@ -7,13 +7,21 @@ import env from "react-dotenv";
 import styled from "styled-components";
 import { toast } from "react-toastify";
 
+import {FaEye,FaEyeSlash} from "react-icons/fa";
+
+
 function SignUp() {
     const [status,setStatus]  = useState( '' );
+
+    const [show,setShow] = useState(false)
+    const handleShow = () => {
+      setShow(!show)
+    }
 
     const formik = useFormik({
       initialValues:{ 
         name:'',
-        email:'',
+        email:'', 
         phone:'',
         password:'',
         ProfileImage:''
@@ -84,10 +92,18 @@ function SignUp() {
             
 
             &nbsp;&nbsp;   
-            <input id="password" name="password" type="text"
+            <input id="password" name="password" type={show?"text":"password"}
                   className="form-control" placeholder='Enter password'
                   onChange={formik.handleChange}
-                  value={formik.values.password}/>
+                  value={formik.values.password}
+                  />
+        <div className="label2">
+         <label onClick={handleShow}>
+            <div>
+              {show?<FaEyeSlash/>:<FaEye/>}
+            </div>
+          </label>
+          </div>
             
          </div>
             <input id="ProfileImage" name="ProfileImage" type="text"

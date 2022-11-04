@@ -7,7 +7,7 @@ export let login = async(val)=>{
           let res =  await axios.post('http://localhost:3000',val)
             if(res)
             {
-              return res.data
+              return res.data 
             }
             else{
                 return res.data
